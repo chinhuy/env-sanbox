@@ -14,7 +14,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment: testing
+    env:
+      AWS_ACCESS_KEY_ID: ${{ testing.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ testing.AWS_SECRET_ACCESS_KEY }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
